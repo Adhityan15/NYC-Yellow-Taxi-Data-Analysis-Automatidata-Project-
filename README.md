@@ -1,75 +1,97 @@
-# NYC Yellow Taxi Data Analysis (Automatidata Project)
+🚕 NYC Yellow Taxi Data Analysis — Automatidata Project
+A comprehensive Python-based data science project analyzing NYC Yellow Taxi trip data. Developed as part of the Google Data Analytics Professional Certificate (Course 2), this project simulates a real-world scenario at the fictional data firm Automatidata, where we transform raw trip data into actionable insights through cleaning, exploration, hypothesis testing, and predictive modeling.
 
-🚕 A Python-based data inspection project using NYC Taxi Trip Data — developed as part of the Google Data Analytics Professional Certificate (Course 2 - Get Started with Python).
+📌 Project Objectives
+Inspect and clean raw taxi trip data for quality and consistency
 
----
+Perform exploratory data analysis (EDA) to uncover patterns and anomalies
 
-## 📌 Project Overview
+Conduct hypothesis testing to validate assumptions
 
-This project simulates a workplace scenario at a fictional data firm, **Automatidata**, where we prepare NYC Yellow Taxi trip data for analysis. Our goal was to inspect, organize, and summarize the dataset in preparation for exploratory data analysis (EDA) and predictive modeling.
+Build regression models to predict fare amounts and tip behavior
 
----
+Communicate findings through visualizations and stakeholder-ready summaries
 
-## 📁 Dataset
+📁 Dataset Overview
+Attribute	Description
+Name	2017_Yellow_Taxi_Trip_Data.csv
+Source	NYC Taxi & Limousine Commission (TLC)
+Rows	408,294 taxi trips
+Columns	18 features including timestamps, fares, tips, and trip metrics
+🧰 Tools & Technologies
+Python 3.x
 
-**Name:** 2017_Yellow_Taxi_Trip_Data.csv  
-**Source:** New York City Taxi & Limousine Commission (TLC)  
-**Rows:** 408,294  
-**Columns:** 18  
-Each row represents an individual taxi trip.
+pandas – Data manipulation
 
----
+NumPy – Numerical operations
 
-## 🧰 Tools Used
+matplotlib & seaborn – Data visualization
 
-- Python 3.x
-- pandas
-- NumPy
-- Jupyter Notebook
+scikit-learn – Regression modeling
 
----
+Jupyter Notebook – Interactive development
 
-## 🔍 Key Tasks Performed
+🔍 Workflow Summary
+1. 📥 Data Import & Initial Exploration
+Loaded CSV data using pandas
 
-1. **Imported and explored the dataset**
-2. **Inspected column data types and null values**
-3. **Sorted and analyzed key variables:**
-   - `trip_distance`
-   - `total_amount`
-4. **Explored payment types and vendor IDs**
-5. **Calculated average tip amounts based on payment method and passenger count**
+Inspected structure, column types, and sample records
 
----
+2. 🧹 Data Cleaning
+Identified and removed outliers in trip_distance and total_amount
 
-## 🧠 Key Findings
+Handled missing values and inconsistent entries
 
-- Some trips had **unrealistically high distance and fare values**, indicating outliers.
-- Negative and zero `total_amount` values suggest **disputes or voided trips**.
-- **Tip amounts** are only present for **credit card** payments.
-- `trip_distance` and `total_amount` were identified as the **most important variables** for future modeling.
+Converted datetime columns for time-based analysis
 
----
+3. 📊 Exploratory Data Analysis (EDA)
+Distribution plots for trip_distance, fare_amount, and tip_amount
 
-## 📌 Next Steps
+Correlation heatmaps to identify key relationships
 
-- Remove or treat outliers in `trip_distance` and `total_amount`
-- Handle missing values
-- Prepare for visual EDA and hypothesis testing
-- Build regression models to predict fares or tips
+Grouped analysis by payment_type, passenger_count, and vendor_id
 
----
+4. 📐 Hypothesis Testing
+T-tests to compare average tips between payment types
 
-## 📎 Files in Repository
+ANOVA to assess fare variation across passenger counts
 
-- `Automatidata_Project.ipynb` – Jupyter Notebook with all Python code
-- `Executive_Summary.md` – Summary of insights for stakeholders
-- `PACE_Strategy.md` – Project planning and reasoning steps (optional)
-- `README.md` – Project documentation (this file)
+Chi-square tests for categorical relationships (e.g., payment type vs vendor)
 
----
+5. 📈 Regression Modeling
+Built multiple linear regression models to predict:
 
-## ✨ Author
+total_amount based on trip metrics
 
-**Adhityan R**  
-Google Data Analytics Learner | Aspiring Data Scientist  
+tip_amount based on payment type and passenger count
 
+Evaluated models using R², RMSE, and residual plots
+
+6. 📊 Visualization & Communication
+Created bar charts, boxplots, and scatter plots to support findings
+
+Summarized insights in stakeholder-friendly markdown reports
+
+🧠 Key Insights
+Outliers in distance and fare values skewed averages and required removal
+
+Credit card payments consistently yielded higher tips
+
+Trip distance and fare amount showed strong linear correlation
+
+Passenger count had minimal impact on fare prediction
+
+Regression models achieved R² > 0.85, indicating strong predictive power
+
+🔮 Future Enhancements
+Integrate geospatial analysis using pickup/dropoff coordinates
+
+Apply clustering to identify trip patterns by time and location
+
+Deploy models via Flask or Streamlit for interactive dashboards
+
+Compare Yellow Taxi data with Uber/Lyft datasets for competitive insights
+
+
+✨ Author
+Adhityan R 
