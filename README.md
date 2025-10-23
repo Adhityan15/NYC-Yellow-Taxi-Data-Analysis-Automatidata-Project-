@@ -1,5 +1,5 @@
 🚕 NYC Yellow Taxi Data Analysis — Automatidata Project
-A comprehensive Python-based data science project analyzing NYC Yellow Taxi trip data. Developed as part of the Google Data Analytics Professional Certificate (Course 2), this project simulates a real-world scenario at the fictional data firm Automatidata, where we transform raw trip data into actionable insights through cleaning, exploration, hypothesis testing, and predictive modeling.
+A comprehensive Python-based data science project analyzing NYC Yellow Taxi trip data. Developed as part of the Google Advanced Data Analytics Professional Certificate , this project simulates a real-world scenario at the fictional data firm Automatidata, where we transform raw trip data into actionable insights through cleaning, exploration, hypothesis testing, and predictive modeling.
 
 📌 Project Objectives
 Inspect and clean raw taxi trip data for quality and consistency
